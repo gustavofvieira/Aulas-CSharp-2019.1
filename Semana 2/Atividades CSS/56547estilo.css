@@ -1,0 +1,19 @@
+div{
+	height: 200px;
+	width: 150px;
+	border: solid 2px black;
+	display: inline-block;
+}
+
+.um{
+	background-color: yellow;
+}
+.dois{
+	background-color: red;
+}
+.tres{
+	background-color: blue;
+}
+.quatro{
+	background-color: black;
+}

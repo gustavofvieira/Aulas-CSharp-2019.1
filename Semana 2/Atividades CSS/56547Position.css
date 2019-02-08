@@ -1,0 +1,26 @@
+.ext{
+	background-color: blue;
+	height: 150px;
+	width: 100px;
+
+}
+.int{
+	background-color: yellow;
+	height: 20px;
+	width: 40px;
+	margin-left: 20% ;
+
+}
+.telona{
+	background-color: gray;
+	height: 400px;
+	width: 100px;
+	position: absolute;
+}
+.chat{
+	background-color: pink;
+	height: 10px;
+	width: 25px;
+	margin-right: 0px;
+	position: fixed;
+}

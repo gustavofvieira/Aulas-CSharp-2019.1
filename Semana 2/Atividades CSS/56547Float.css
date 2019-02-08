@@ -1,0 +1,53 @@
+*{
+	margin: 0px;
+}
+
+a{
+	color: white;
+	font-family: "Arial black";
+	font-size: 16px;
+	margin-left: 5px; 
+	padding-top: 10%;
+}
+header{
+	background-color: black;
+	height: 50px;
+	margin-bottom: 10px;
+}
+.um, .dois, .tres, .quatro{
+	margin-bottom: 10px;
+} 
+.um{
+	float: left;
+	height: 150px;
+	width: 24%;
+	background-color: yellow;
+	margin-right: 1%;
+}
+.dois{
+	float: left;
+	height: 150px;
+	width: 24%;
+	background-color: blue;
+}
+.tres{
+	float: left;
+	height: 150px;
+	width: 24%;
+	background-color: pink;
+	margin-left: 1%;
+}
+.quatro{
+	float: left;
+	height: 150px;
+	width: 24%;
+	background-color: green;
+	margin-left: 1%;
+;
+}
+footer{
+	clear: both;
+	height: 10px;
+	background-color: black;
+	margin-top: 15px; 
+}

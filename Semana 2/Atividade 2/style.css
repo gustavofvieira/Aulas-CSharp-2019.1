@@ -1,0 +1,19 @@
+*{
+    margin: 0%;
+}
+header{
+    padding: 1%;
+    background-color: rgb(65, 76, 87);
+}
+footer{
+    
+    clear: both;
+    padding: 1%;
+    background-color: rgb(24, 101, 179);
+}
+.form{
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+    
+}
