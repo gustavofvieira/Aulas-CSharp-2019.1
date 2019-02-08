@@ -3,5 +3,14 @@
 
 }
 .superior_preto{
-	background-color: #2e2e1f;
+	background-color: #0e0e11;
+	padding: 1%;
+	text-align: center;
+	font-family: 'Courier New', Courier, monospace;
+	color: #dcdceb;
+	
+}
+.margem_livre{
+	text-align: none;
+	color: red;
 }
