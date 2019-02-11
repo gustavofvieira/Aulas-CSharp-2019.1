@@ -11,9 +11,26 @@ footer{
     padding: 1%;
     background-color: rgb(24, 101, 179);
 }
-.form{
-    font-family: Arial, Helvetica, sans-serif;
-    
 
-    
+
+.div_centro{
+    height: 150px;
+    width: 350px;
+    background-color: #45ADA8;
+    position: absolute;
+    margin-left: 500px;
+    text-align: center;
 }
+#dentro{
+    height: 75px;
+    width: 75px;
+    color: #547980;
+}
+/*#fora{
+    height: 150px;
+    width: 150px;
+    background-color: #45ADA8;
+    position: absolute;
+    margin-left: 100px;
+}*/
+
