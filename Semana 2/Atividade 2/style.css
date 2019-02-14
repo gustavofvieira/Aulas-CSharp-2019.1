@@ -3,7 +3,9 @@
 }
 header{
     padding: 1%;
+    width: 100%;
     background-color: rgb(65, 76, 87);
+    position: fixed;
 }
 footer{
     
@@ -14,12 +16,14 @@ footer{
 
 
 .div_centro{
-    height: 150px;
-    width: 350px;
-    background-color: #45ADA8;
+    height: 250px;
+    width: 450px;
+    background-color: rgba(66, 134, 244, 0.1)
+;
     position: absolute;
-    margin-left: 500px;
+    margin-left: 450px;
     text-align: center;
+
 }
 #dentro{
     height: 75px;

@@ -2,31 +2,35 @@
 <html>
     <head>
         <title>Calculos IMC</title>
-        <script rel="text/javascript" href="calc_imc"></script>
+        
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header></header>
 
-        <br>
-       <center> <h3>Calculo de IMC</h3></center>
         <br><br><br><br>
         <div class="div_centro">
+            <img src="img/meu-imc.png" width="40%">
             <form class="form">
                 <label>Nome:</label>
-                <input type="text"><br>
+                <input type="text" id="nome"><br>
                 <label>Peso:</label>
-                <input type="number"><br>
+                <input type="number" id="peso"><br>
                 <label>Altura:</label>
-                <input type="number"><br>
-                <input onclick="" type="button" value="Calcular">
+                <input type="number" id="altura"><br>
+                <input onclick="saudar()" type="button" value="Enviar" name="">
             </form>
   
         </div>
+
         <div  id="fora">
             <div id="dentro"></div>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <br><br><br><br><br><br><br><br><br>
+        <center> <img src="img/saude.jpg"></center>
+         <br><br><br><br><br><br><br><br><br><br><br><br><br>
         <footer></footer>
+        <script type="text/javascript" src="calc_imc.js"></script>
     </body>
 </html>
