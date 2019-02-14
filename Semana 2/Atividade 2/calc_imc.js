@@ -1,14 +1,14 @@
-function saudar() {
+function calcular_imc() {
 	var nome = document.getElementById("nome").value;
-	var altura = document.getElementById("altura").value;
-	var peso = document.getElementById("peso").value;
+	var altura = parseFloat(document.getElementById("altura").value);
+	var peso = parseFloat(document.getElementById("peso").value);
+	var idade = parseInt(document.getElementById("idade").value);
 	var result = altura * 2;
 	var imc = peso / result;
-	alert("Ola "+nome+"\naltura: "+altura+"\npeso:"+peso+"\nIMC: "+imc);
-}
-function calcular_imc() {
-	var altura = document.getElementById("altura").value;
-	var peso = document.getElementById("peso").value;
-	var imc = peso / altura * 2;
-
+	if(idade >= 18){
+		alert(nome+"maior de idade\n"+idade);
+		
+	}
+	document.getElementById("resultado").innerHTML = "Ola "+nome+"\naltura: "+altura+"\npeso:"+peso+"\nIMC: "+imc;
+	
 }

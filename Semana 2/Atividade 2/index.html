@@ -14,11 +14,14 @@
             <form class="form">
                 <label>Nome:</label>
                 <input type="text" id="nome"><br>
+                <label>Idade:</label>
+                <input type="number" id="idade"><br>
                 <label>Peso:</label>
                 <input type="number" id="peso"><br>
                 <label>Altura:</label>
                 <input type="number" id="altura"><br>
-                <input onclick="saudar()" type="button" value="Enviar" name="">
+                <input onclick="calcular_imc()" type="button" value="Enviar" name="">
+                <p id="resultado"></p>
             </form>
   
         </div>
