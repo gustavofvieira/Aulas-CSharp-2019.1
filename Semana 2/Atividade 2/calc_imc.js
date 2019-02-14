@@ -11,8 +11,12 @@ function calcular_imc() {
 	}
 	document.getElementById("resultado").innerHTML = "Ola "+nome+"\naltura: "+altura+"\npeso:"+peso+"\nIMC: "+imc;
 	
-	var frutas = document.getElementsByName("frutas");
+
+}
+function frutas() {
+    var frutas = document.getElementsByClassName("frutas");
+    alert("Fruta 1: "+frutas[0].value);
 	for(var i = frutas.length -1 ; i>=0 ; i--){
-		document.getElementById("resultado").innerHTML += frutas[i]; 
+		document.getElementById("resultadoF").innerHTML += frutas[i].value+"<br>"; 
 	}
 }
