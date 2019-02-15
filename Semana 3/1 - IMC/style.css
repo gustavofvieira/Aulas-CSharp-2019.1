@@ -1,0 +1,40 @@
+*{
+    margin: 0%;
+}
+header{
+    padding: 1%;
+    width: 100%;
+    background-color: rgb(65, 76, 87);
+    position: fixed;
+}
+footer{
+    
+    clear: both;
+    padding: 1%;
+    background-color: rgb(24, 101, 179);
+}
+
+
+.div_centro{
+    height: 250px;
+    width: 450px;
+    background-color: rgba(66, 134, 244, 0.1)
+;
+    position: absolute;
+    margin-left: 450px;
+    text-align: center;
+
+}
+#dentro{
+    height: 75px;
+    width: 75px;
+    color: #547980;
+}
+/*#fora{
+    height: 150px;
+    width: 150px;
+    background-color: #45ADA8;
+    position: absolute;
+    margin-left: 100px;
+}*/
+

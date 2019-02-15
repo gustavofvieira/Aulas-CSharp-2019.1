@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculos IMC</title>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header></header>
+
+        <br><br><br><br>
+        <div class="div_centro">
+            <img src="img/meu-imc.png" width="40%">
+            <form class="form">
+                <label>Nome:</label>
+                <input type="text" id="nome"><br>
+                <label>Idade:</label>
+                <input type="number" id="idade"><br>
+                <label>Peso:</label>
+                <input type="number" id="peso"><br>
+                <label>Altura:</label>
+                <input type="number" id="altura"><br>
+                <input onclick="calcular_imc()" type="button" value="Enviar" name="">
+                <p id="resultado"></p>
+                     </form>
+  
+        </div>
+        <p id="resultadoF"></p>
+                <select>
+                    <option class="frutas">Abacate</option>
+                    <option class="frutas">Morango</option>
+                    <option class="frutas">Maçã</option>
+                    <option class="frutas">Limão</option>
+
+                </select>
+        <input onclick="frutas()" type="button" value="Frutas" name="">
+        <div  id="fora">
+            <div id="dentro"></div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br>
+        <center> <img src="img/saude.jpg"></center>
+         <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <footer></footer>
+        <script type="text/javascript" src="calc_imc.js"></script>
+    </body>
+</html>
