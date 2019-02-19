@@ -1,19 +1,4 @@
-//window.location.href = "index.html";
-// ou uma variante com o mesmo efeito
-//window.location.assign("index.html");
 
-function alerta() {
-	alert("pegou");
-}
-function cadastrar() {
-	var nome = document.getElementById("nome");
-	var alimento1 = document.getElementById("alimento1");
-	var alimento2 = document.getElementById("alimento2");
-	var alimento3 = document.getElementById("alimento3");
-
-
-
-}
 
 function gera_tabela(){
 	alert("chegou no inicio da função");
@@ -24,8 +9,7 @@ function gera_tabela(){
 
 //-------------------------------------------------------------------------------------------
 	if(tabelaCriada == 0){
-		alert("entrou no if");
-
+		
 	var newTable = document.createElement("TABLE");
 	var borda = document.createAttribute("BORDER");
 	borda.value = "1"; 
@@ -56,6 +40,35 @@ function gera_tabela(){
 	
 
 }
+	if(tabelaCriada == 1 ){
+	var newTrSequencia = document.createElement("TR");
+	newTable.appendChild(newTrSequencia);
+	var tdHorarioSequencia = document.createElement("TD");
+	var txtHorarioSequencia = document.createTextNode(nome);
+	var tdAlimentoSequencia = document.createElement("TD");
+	var txtAlimentoSequencia = document.createTextNode(alimento1);
+	var tdPorcaoSequencia = document.createElement("TD");
+	var txtPorcaoSequencia = document.createTextNode(alimento2);
+
+
+	tdHorarioSequencia.appendChild(txtHorarioSequencia);//colocando o texto na tag header da tabela.
+	tdAlimentoSequencia.appendChild(txtAlimentoSequencia);
+	tdPorcaoSequencia.appendChild(txtPorcaoSequencia);
+
+ 	newTable.appendChild(tdHorarioSequencia); // adiciono o header na table
+	newTable.appendChild(tdAlimentoSequencia);
+	newTable.appendChild(tdPorcaoSequencia);
+
+
+}
+
+var horarios = new Array();
+horarios = ["6:00", "9:00", "12:00", "15:00", "18:00","21:00"];
+
+
+
+
+
 	
 }
 var tabelaCriada = 0;

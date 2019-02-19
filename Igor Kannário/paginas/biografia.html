@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+      <meta charset="utf-8">
+        <!-- Compiled and minified CSS -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+          <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+          <!-- Compiled and minified JavaScript -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    </head>
+
+    <body>
+<!--NAV!-->
+      <nav class="white" role="navigation" >
+          <div class="nav-wrapper container"><img src="../assets/img/logo-igor.png " style="width:180px">
+            <ul t class="right hide-on-med-and-down">
+              <li><a href="contato.html" class="grey-text text-darken-3 ">Contatos</a></li>
+            </ul>
+              <ul class="right hide-on-med-and-down">
+              <li><a href="biografia.html" class="grey-text text-darken-3 z-depth-3">Biografia</a></li>
+            </ul>
+              <ul class="right hide-on-med-and-down">
+              <li><a href="index.html" class="grey-text text-darken-3">Home</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+         <li><a href="index.html" >Home</a></li>
+        <li><a href="biografia.html" class="grey-text text-darken-3 z-depth-3">Biografia</a></li>
+        <li><a href="contatos.html " >Contatos</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons"></i></a>
+          </div>
+        </nav>
+
+      <div style="margin: 50px 0px 50px 0px">
+      <div class="carousel carousel-slider" data-indicators="true" style="height: 490px">
+        <div class="carousel-item orange white-text ">
+          <div class="row valign-wrapper" style="margin-top: 50px">
+            <div class="col s6">
+              <img src="../assets/img/igor-kanario.jpg" alt="" class="circle responsive-img col s12"  class="imagem1"> 
+            </div>
+            <div class="col s10">
+              <h3>Início da vida e carreira</h3>
+              
+                <p>Kannário morou quase a vida toda no bairro humilde e violento da Liberdade, periferia de Salvador. Começou na música aos 8 anos. Com essa idade, tocava bateria e era backing vocal na banda Eclipse do Samba.</p>
+                O vocalista da banda brigou com o produtor e Igor tomou o microfone principal pela primeira vez. Depois do Eclipse do Samba, Kannário passou por Coisas do Samba, Patrulha do Samba e Swing do P.</p>
+                <p> Nesse último, foi onde ele mais se destacou no cenário pagodeiro baiano. Chegou à fama até criar a banda A Bronkka em 2009, com a qual alcançou o estrelato da periferia e acabou saindo para carreira solo no final de 2012. Levou a banda toda com ele, que o acompanha desde o início da carreira. Em 2016, o cantor fez uma turnê na Europa.</p> 
+            </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item orange  white-text" href="#one!">
+        <div class="row valign-wrapper" style="margin-top: 50px">
+            <div class="col s6" class="imagem2">
+              <img src="../assets/img/Kanario.jpg" alt="" class="circle responsive-img"> 
+            </div>
+            <div class="col s10">
+              <h3>Carnaval</h3>
+              <p>Após a prisão, sua participação no carnaval daquele ano foi suspensa, mas o cantor acabou <br>puxando o trajeto de trios elétricos independentes e conquistou o Troféu Dodô e Osmar de Artista Revelação Masculino do Carnaval 2015.</p>
+              <p> Em março de 2015, o Correio 24 Horas publicou um artigo cobrindo as antigas controvérsias de Igor Kannário. Em 2016, o cantor discutiu com a TV Bahia (afiliada da Rede Globo) em cima do trio elétrico em frente ao camarote da emissora.</p> 
+              <p> A discussão ocorreu após a mesma censurar seu nome da entrevista de Caetano Veloso. No mesmo ano, o público vaiou o bloco da cantora Cláudia Leitte enquanto o cantor estava em cima do trio.</p>
+              
+            </div>
+          </div>
+        </div>
+
+
+    <div class="carousel-item orange  white-text" href="#one!">
+      <div class="row valign-wrapper " style="margin:10px 0px 20px 0px">
+        <div class="col s6">
+          <img src="../assets/img/Kannario.jpg"  alt="" class="circle responsive-img" style="margin-bottom:20px height:20px"> 
+        </div>
+        <div class="col s10">
+          <h3>Vida pessoal</h3>
+            <p>Em 2015, após analisar as letras das músicas do cantor, a jornalista Luar Montes publicou uma crítica a Kannário dizendo que ele "generaliza e marginaliza as comunidades de Salvador quando se auto intitula 'príncipe do gueto'. Rebelde sem causa e sem poesia, o 'gritador' para mim não passa de um baderneiro bem empresariado e agora patrocinado pela prefeitura de Salvador (ou seja, por mim, por [você], por todos nós...)". Após ser eleito vereador, Igor Kannário foi criticado por usuários nas redes sociais.</p> 
+            <p>Igor Kannário consome maconha e é a favor da legalização do uso, declarando: "Legalize! Legalize que fica mais bonito no mercado do que em uma boca [de fumo]." Do seu relacionamento com sua esposa Maria Quitéria, nasceu Laura Beatriz (entre 2005/2006). Igor Kannário tem uma relação conturbada com sua mãe biológica, Dejanira. Dejanira e a "segunda mãe" de Igor Kannário tem desavenças por questões religiosas.</p>
+        </div>
+        </div>
+    </div>
+  </div>
+  </div>
+
+    <script>
+        $(document).ready(function(){
+          $('.carousel').carousel();
+          
+            setInterval(function(){
+               $('.carousel').carousel('next');
+            },20000);
+        });
+
+    </script>
+
+<!--Footer da página-->
+  <footer class="page-footer black">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Sobre o Princípe</h5>
+            <p class="grey-text text-lighten-4">O pássaro porta voz do gueto, com suas canções libertadoras,<br> TÁ LIGAAADO.</p>
+
+
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Menu de Navegação</h5>
+            <ul>
+              <li><a class="white-text" href="index.html">Home</a></li>
+              <li><a class="white-text" href="biografa.html">Biografia</a></li>
+              <li><a class="white-text" href="contatos.html">Contatos</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Siga-nos</h5>
+            <ul>
+            <li><img src="../assets/img/facebook.ico" width="12%"></li>
+            <li><img src="../assets/img/instagram.png" width="12%"></li>
+            <li><img src="../assets/img/Linkedin.png" width="12%"></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        Produzido por <span class="orange-text text-lighten-3" >Equipe KANNARIANA</span>
+        </div>
+      </div>
+    </footer>
+
+    </body>
+</html>
