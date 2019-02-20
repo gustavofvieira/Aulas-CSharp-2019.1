@@ -1,12 +1,16 @@
 
 
 function gera_tabela(){
-	alert("chegou no inicio da função");
+	//alert("chegou no inicio da função");
 	var nome = document.getElementById("nome").value;
 	var alimento1 = document.getElementById("alimento1").value;
 	var alimento2 = document.getElementById("alimento2").value;
 	var alimento3 = document.getElementById("alimento3").value;
-
+	
+	var newP = document.createElement("P");
+	var txtNome = document.createTextNode("Sua tabela foi criada "+nome);
+	newP.appendChild(txtNome);
+	document.body.appendChild(newP);
 //-------------------------------------------------------------------------------------------
 	if(tabelaCriada == 0){
 		
@@ -41,29 +45,41 @@ function gera_tabela(){
 
 }
 	if(tabelaCriada == 1 ){
-	var newTrSequencia = document.createElement("TR");
-	newTable.appendChild(newTrSequencia);
-	var tdHorarioSequencia = document.createElement("TD");
-	var txtHorarioSequencia = document.createTextNode(nome);
-	var tdAlimentoSequencia = document.createElement("TD");
-	var txtAlimentoSequencia = document.createTextNode(alimento1);
-	var tdPorcaoSequencia = document.createElement("TD");
-	var txtPorcaoSequencia = document.createTextNode(alimento2);
+
+		
+		var horarios = ['6:00', '9:00', '12:00', '15:00', '18:00','21:00'];
+	    var hr = Math.floor(Math.random() * horarios.length);
+	    var alimentos = [alimento1,alimento2,alimento3];
+	    var ar = Math.floor(Math.random() * alimentos.length);
+		for (var i=0;i<6;i++){
+
+			var newTrSequencia = document.createElement("TR");
+			newTable.appendChild(newTrSequencia);
+			var tdHorarioSequencia = document.createElement("TD");
+			var txtHorarioSequencia = document.createTextNode(horarios[hr]);
+			var tdAlimentoSequencia = document.createElement("TD");
+			var txtAlimentoSequencia = document.createTextNode(alimentos[ar]);
+			var tdPorcaoSequencia = document.createElement("TD");
+			var txtPorcaoSequencia = document.createTextNode(alimentos[ar]);
 
 
-	tdHorarioSequencia.appendChild(txtHorarioSequencia);//colocando o texto na tag header da tabela.
-	tdAlimentoSequencia.appendChild(txtAlimentoSequencia);
-	tdPorcaoSequencia.appendChild(txtPorcaoSequencia);
+			tdHorarioSequencia.appendChild(txtHorarioSequencia);//colocando o texto na tag header da tabela.
+			tdAlimentoSequencia.appendChild(txtAlimentoSequencia);
+			tdPorcaoSequencia.appendChild(txtPorcaoSequencia);
 
- 	newTable.appendChild(tdHorarioSequencia); // adiciono o header na table
-	newTable.appendChild(tdAlimentoSequencia);
-	newTable.appendChild(tdPorcaoSequencia);
+		 	newTable.appendChild(tdHorarioSequencia); // adiciono o header na table
+			newTable.appendChild(tdAlimentoSequencia);
+			newTable.appendChild(tdPorcaoSequencia);
+
+
+
+
+		}
 
 
 }
 
-var horarios = new Array();
-horarios = ["6:00", "9:00", "12:00", "15:00", "18:00","21:00"];
+
 
 
 
