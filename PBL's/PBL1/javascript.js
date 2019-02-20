@@ -7,12 +7,13 @@ function gera_tabela(){
 	var alimento2 = document.getElementById("alimento2").value;
 	var alimento3 = document.getElementById("alimento3").value;
 	
+	
+//-------------------------------------------------------------------------------------------
+	if(tabelaCriada == 0){
 	var newP = document.createElement("P");
 	var txtNome = document.createTextNode("Sua tabela foi criada "+nome);
 	newP.appendChild(txtNome);
 	document.body.appendChild(newP);
-//-------------------------------------------------------------------------------------------
-	if(tabelaCriada == 0){
 		
 	var newTable = document.createElement("TABLE");
 	var borda = document.createAttribute("BORDER");
@@ -49,8 +50,12 @@ function gera_tabela(){
 		
 		var horarios = ['6:00', '9:00', '12:00', '15:00', '18:00','21:00'];
 	    var hr = Math.floor(Math.random() * horarios.length);
+
 	    var alimentos = [alimento1,alimento2,alimento3];
 	    var ar = Math.floor(Math.random() * alimentos.length);
+
+	   	var porcoes = ['20', '30', '40','50','100', '250'];
+	    var pr = Math.floor(Math.random() * horarios.length);
 		for (var i=0;i<6;i++){
 
 			var newTrSequencia = document.createElement("TR");
@@ -60,7 +65,7 @@ function gera_tabela(){
 			var tdAlimentoSequencia = document.createElement("TD");
 			var txtAlimentoSequencia = document.createTextNode(alimentos[ar]);
 			var tdPorcaoSequencia = document.createElement("TD");
-			var txtPorcaoSequencia = document.createTextNode(alimentos[ar]);
+			var txtPorcaoSequencia = document.createTextNode(porcoes[pr]);
 
 
 			tdHorarioSequencia.appendChild(txtHorarioSequencia);//colocando o texto na tag header da tabela.
