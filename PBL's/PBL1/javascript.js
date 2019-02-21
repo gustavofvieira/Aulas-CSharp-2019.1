@@ -1,6 +1,18 @@
+function verifica_campo() {
+			if(document.nome.value=="" || document.nome.value.length < 8)
+			{
+			alert( "Preencha campo NOME corretamente!" );
+			document.nome.focus();
+			return false;
+			}
+ 
+
+ }
+
 
 
 function gera_tabela(){
+
 	//alert("chegou no inicio da função");
 	var nome = document.getElementById("nome").value;
 	var alimento1 = document.getElementById("alimento1").value;

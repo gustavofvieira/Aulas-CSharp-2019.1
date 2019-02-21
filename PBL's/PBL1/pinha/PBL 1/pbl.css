@@ -1,0 +1,63 @@
+*{
+	margin: 0px;
+}
+.cab{
+	background-color: green;
+	text-align: center;
+	color:white;
+	font-size: 42px;
+	font-family: impact;
+}
+table{
+	margin-top: 50px;
+	margin-right: 15px;
+	float: center;
+	text-align: center;
+	padding: 10px;
+}
+th{
+	background-color:rgba(0, 0, 0, 0.5);
+}
+.camponome{
+	text-align: center;
+	margin-top: 70px;
+	font-size: 22px;
+}
+.form{
+	margin-top: -15px;
+	margin-left: 20px;
+	font-size: 18px;
+
+}
+p{
+	color: white;
+	padding: 10px 100px 10px 100px;
+	font-size: 36px;
+	font-family: palatino;
+}
+
+td{
+	color: black;
+	padding: 10px 100px 10px 100px;
+	font-size: 36px;
+	font-family: palatino;
+	background-color: rgba(28, 104, 22, 1);
+	color: white;
+}
+
+.gerar{
+	margin: 5px 0px 50px 700px;
+	padding: 10px;
+	font-size:20px;
+}
+
+.hora{
+	color: black;
+}
+.horario1{
+	margin: 20px 0px 20px 250px;
+}
+
+.horario2{
+	margin: -824px 0px 20px 900px;
+}
