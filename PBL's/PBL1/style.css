@@ -30,3 +30,6 @@ table{
 	background-color: rgba(66, 134, 244,0.1);
 	font-family: Ink Free;
 }
+button{
+	margin-bottom: 10%;
+}
