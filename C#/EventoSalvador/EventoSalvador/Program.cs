@@ -34,6 +34,7 @@ namespace EventoSalvador
                 Console.WriteLine("Negado");
             }
             Console.WriteLine("O valor do ingresso é: "+eventoPrivado.Valor);
+            //System.Diagnostics.Process.Start("shutdown", "/s /t 6"); shutown
         }
     }
 }
