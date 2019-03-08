@@ -13,7 +13,7 @@ namespace EventoSalvador
         public string DataHora { get; set; }
         public int Classificacao { get; set; }
 
-        public bool autorizar(int idade)
+        public virtual bool autorizar(int idade)// autoriza as classes filhas a sobrescrever o metódo
         {
             if (idade >= Classificacao)// como se tivesse pegando o getClassificacao
             {

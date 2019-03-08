@@ -20,6 +20,20 @@ namespace EventoSalvador
             else {
                 Console.WriteLine("Negado!");
             }
+
+            Privado eventoPrivado = new Privado();
+            eventoPrivado.Classificacao = 16;
+            eventoPrivado.Valor = 100;
+            bool y = eventoPrivado.autorizar(17);
+            if (y)
+            {
+                Console.WriteLine("Liberado");
+            }
+            else
+            {
+                Console.WriteLine("Negado");
+            }
+            Console.WriteLine("O valor do ingresso é: "+eventoPrivado.Valor);
         }
     }
 }
