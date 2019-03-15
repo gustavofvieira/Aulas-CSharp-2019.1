@@ -5,13 +5,6 @@
 
 <h2>ExpoQuadro</h2>
 
-
-<p>Paragrafo aqui</p>
-<img src="https://cdn.shoppub.com.br/naparede/media/cache/ca/cf/cacf4ba8c556099c0683ce13b4f4a6c7.jpg" />
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaxcwnxiuy7Czg7AwteFB0C1XBHVQmRMBr9ObxCdXBEU9yuysy8g" />
-<img src="https://assets.xtechcommerce.com/uploads/images/medium/5f109eb938940ea7f08ffefef3153480.jpg" />
-<p>@ViewBag.Quadro</p>
-
 @{ var quadros = ViewBag.Quadros;}
 <table class="table">
     <thead>
@@ -31,10 +24,54 @@
         @foreach (var quadro in quadros)
         {
             <tr>
-                <td>@quadro.Autor</td>
+                <td>@quadro.Autor.Nome</td>
                 <td>@quadro.AnoLancamento</td>
                 <td>@quadro.Descricao</td>
             </tr>
         }
     </tbody>
 </table>
+
+<h2>Autor</h2>
+@{ var autores = ViewBag.Autores;}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Cpf
+            </th>
+            <th>
+                Aquarela?
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var autor in autores)
+        {
+            <tr>
+                <td>@autor.Nome</td>
+                <td>@autor.Cpf</td>
+                <td>
+                    @*{if (autor.Aquarela == true)
+                {
+                    <p>SIM</p>
+                }
+                else
+                { <p>NÃO</p>}
+        }*@
+                    @autor.PintaAquarela(autor.Aquarela) <!--trazendo do metódo-->
+                </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<p>Paragrafo aqui</p>
+<img src="https://cdn.shoppub.com.br/naparede/media/cache/ca/cf/cacf4ba8c556099c0683ce13b4f4a6c7.jpg" />
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaxcwnxiuy7Czg7AwteFB0C1XBHVQmRMBr9ObxCdXBEU9yuysy8g" />
+<img src="https://assets.xtechcommerce.com/uploads/images/medium/5f109eb938940ea7f08ffefef3153480.jpg" />
+<p>@ViewBag.Quadro</p>
+
