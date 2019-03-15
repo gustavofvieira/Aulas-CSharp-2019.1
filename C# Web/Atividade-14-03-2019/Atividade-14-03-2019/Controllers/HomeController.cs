@@ -55,8 +55,9 @@ namespace Atividade_14_03_2019.Controllers
             return View();
         }
 
-        public ActionResult ExpoQuadro()
+        public ActionResult ExpoQuadro(int? id)//a interrogação permite o parametro vazio para ser tratado dentro do metodo
         {
+            id++;
             ViewBag.Quadro = "Quadro Bonito!.";
             List<Quadro> quadros = new List<Quadro>();
             Quadro quadro1 = new Quadro();
