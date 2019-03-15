@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Autor";
+}
+
+<h2>Autor</h2>
+@{ var autores = ViewBag.Autores;}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Cpf
+            </th>
+            <th>
+                Aquarela?
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var autor in autores)
+        {
+            <tr>
+                <td>@autor.Nome</td>
+                <td>@autor.Cpf</td>
+                <td>@{if (autor.Aquarela == true)
+                    {
+                        <p>SIM</p>
+                    }
+                    else
+                    { <p>NÃO</p>}
+                }</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
