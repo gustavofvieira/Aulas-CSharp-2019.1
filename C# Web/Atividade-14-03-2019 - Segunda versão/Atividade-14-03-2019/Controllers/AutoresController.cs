@@ -18,6 +18,7 @@ namespace Atividade_14_03_2019.Controllers
         public ActionResult Index()
         {
             return View(db.Autors.ToList());
+            //return View(db.Autors.ToList().Where(a => a.Aquarela == true));// assume que aquarela é igual a true só vai exibir as aquarelas true
         }
 
         // GET: Autores/Details/5
