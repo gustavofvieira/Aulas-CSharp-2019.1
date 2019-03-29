@@ -28,3 +28,5 @@ Painel de Controle\Contas de Usuário\Gerenciador de Credenciais -- apaga as cre
         public Bloco Bloco { get; set; }
 
     }
+# Migration
+Enable-Migrations -> Add-Migration -> Update-Database
