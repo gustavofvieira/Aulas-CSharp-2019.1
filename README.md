@@ -30,3 +30,8 @@ Painel de Controle\Contas de Usuário\Gerenciador de Credenciais -- apaga as cre
     }
 # Migration
 Enable-Migrations -> Add-Migration -> Update-Database
+
+# Metodos
+GET: solicitação pelo http maquina cliente faz um request para o servidor dá uma resposta por exemplo uma pagina ex: clique no link faz a solicitação get. Action Listner - get source
+
+POST:  o post não responde uma pagina, o cliente passa pelo http os dados, no caso passa os dados sem request, "passagem dos dados do formulário para o servidor"
