@@ -1,0 +1,15 @@
+Você foi convidado a modelar um sistema para o controle de venda de ingressos de uma balada em Salvador. 
+As pessoas para comprar os ingressos de eventos desta balada têm que comparecer a uma bilheteria conveniada. 
+Na bilheteria eles irão informar os seus dados: nome, e-mail e idade. 
+Na hora de comprar o ingresso ele deve comunicar qual o evento e o tipo de ingresso que ele deseja adquirir. 
+Os eventos possuem: nome, data, hora de início e fim e se possui ou não restrição de idade (<18). 
+Ao tentar efetuar uma compra é feita uma validação, verificando se a pessoa pode ou não participar do evento de acordo com a restrição de idade. 
+Cada ingresso possui um valor diferenciado e através do ingresso é possível saber quem é o dono (nome da pessoa), 
+qual o evento associado ao ingresso e qual foi a bilheteria que forneceu o ingresso. 
+Os ingressos podem ser do tipo comum ou VIP (all inclusive) que vai dar direito a entrada na área VIP, 
+além de comida e bebida uma propriedade “free” para os vips e desative-a para ingressos comuns.
+No sistema, deverá ter funcionalidade para:
+- Cadastrar eventos, ingressos, pessoas e bilheterias;
+- Buscar ingressos mostrando o dono, onde foi vendido e de qual o evento é a festa;
+- Vender ingressos para pessoas;
+- Exibir o total de ingressos criados no sistema.

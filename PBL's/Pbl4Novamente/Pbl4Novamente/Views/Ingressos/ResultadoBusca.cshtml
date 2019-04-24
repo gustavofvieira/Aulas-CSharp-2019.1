@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Pbl4Novamente.Models.Ingresso>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Resultado Busca</h2>
+@if (ViewBag.Contador > 0)
+{
+    <label class="btn btn-success">Encontrado: @ViewBag.Contador</label>
+}
+@if (ViewBag.Contador == 0)
+{
+   <label class="btn btn-warning">Nenhum Ingresso Localizado</label>
+ }
+    <table class="table">
+        <tr>
+            <th>
+                Bilheteria
+            </th>
+            <th>
+                Cliente
+            </th>
+            <th>
+                Evento
+            </th>
+            <th>
+                Valor
+            </th>
+            <th>
+                Tipo
+            </th>
+            <th>
+                Free
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bilheteria.Nome)
+                </td>
+                <td>
+                    @ViewBag.RetornoNome
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Evento.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Free)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.IngressoId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.IngressoId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IngressoId })
+                </td>
+            </tr>
+        }
+
+    </table>
