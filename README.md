@@ -35,3 +35,31 @@ Enable-Migrations -> Add-Migration -> Update-Database
 GET: solicitação pelo http maquina cliente faz um request para o servidor dá uma resposta por exemplo uma pagina ex: clique no link faz a solicitação get. Action Listner - get source
 
 POST:  o post não responde uma pagina, o cliente passa pelo http os dados, no caso passa os dados sem request, "passagem dos dados do formulário para o servidor"
+
+#MultiSelect
+
+ @Html.DropDownList("MusicoId", (MultiSelectList)ViewBag.MusicoId, new { multiple = "multiple" }) // Na view
+ 
+  [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Id,Titulo,Data,Classificacao,Conteudo,LocalId")] Registro registro,List<int> PersonagemId)// o personagemId é o personagem aid que está no razor, para pegar a lista de personagens que esta no multselect list
+        {
+            if (ModelState.IsValid)
+            {
+                db.RegistroSet.Add(registro);
+                db.SaveChanges();
+                foreach(var idPersonagem in PersonagemId)
+                {
+                    RegistrioPersonagem rp = new RegistrioPersonagem();
+                    rp.PersonagemId1 = idPersonagem;
+                    rp.RegistroId1 = registro.Id;
+                    db.RegistrioPersonagemSet.Add(rp);
+                   
+                }
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.LocalId = new SelectList(db.LocalSet, "Id", "Nome", registro.LocalId);
+            return View(registro);
+        }
