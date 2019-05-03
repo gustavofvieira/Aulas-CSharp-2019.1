@@ -36,7 +36,7 @@ GET: solicitação pelo http maquina cliente faz um request para o servidor dá 
 
 POST:  o post não responde uma pagina, o cliente passa pelo http os dados, no caso passa os dados sem request, "passagem dos dados do formulário para o servidor"
 
-#MultiSelect
+# MultiSelect
 
  @Html.DropDownList("MusicoId", (MultiSelectList)ViewBag.MusicoId, new { multiple = "multiple" }) // Na view
  
