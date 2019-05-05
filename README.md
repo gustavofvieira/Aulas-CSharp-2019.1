@@ -40,9 +40,14 @@ POST:  o post não responde uma pagina, o cliente passa pelo http os dados, no c
 
  @Html.DropDownList("MusicoId", (MultiSelectList)ViewBag.MusicoId, new { multiple = "multiple" }) // Na view
  
-  [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Titulo,Data,Classificacao,Conteudo,LocalId")] Registro registro,List<int> PersonagemId)// o personagemId é o personagem aid que está no razor, para pegar a lista de personagens que esta no multselect list
+ [HttpPost]
+ 
+ [ValidateAntiForgeryToken]
+
+ public ActionResult Create([Bind(Include = "Id,Titulo,Data,Classificacao,Conteudo,LocalId")] Registro registro,List<int> PersonagemId)
+    
+    // o personagemId é o personagem aid que está no razor, para pegar a lista de personagens que esta no multselect list
+        
         {
             if (ModelState.IsValid)
             {
