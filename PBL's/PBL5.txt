@@ -1,0 +1,15 @@
+Robson Carvalho ultimamente tem estado com alguns problemas de saúde. Ele foi ao médico e só na última vez, foram 4 remédios, cada um com intervalos e dosagens diferentes, fora os que ele já estava tomando antes! Para ele não se perder nos horários de tomar os remédios, ou tomar em dosagens erradas, ele te chamou para desenvolver um sistema simples para ele.
+
+Ele solicita que a cada nova receita que ele receba ele possa cadastrar, quem foi o médico que atendeu (ex: Dr. Evaristo Domingues), qual foi a especialidade (ex: Ortopedista), data, qual foi a clínica/hospital e quais remédios foram passados nessa receita. Os remédios precisarão ser cadastrados com nome, tarja (sem tarja, vermelha, preta e amarela) se precisa reter receita ou não, qual intervalo de tempo que deve tomar o remédio (ex: de 8 em 8h) e qual a dosagem (ex: 1 comprimido; 10 gotas). Se a tarja do remédio for preta, automaticamente (independente do que o Robson informar, a retenção da receita tem que acontecer. Assim também para o remédio sem tarja, que tem vai ser sem retenção de receita.
+
+O mesmo remédio pode ser tomado com dosagens diferentes, depende do grau de gravidade do problema.
+Como Robson sempre pequisa na Internet sobre os problemas que ele tem de saúde, ele também quer registrar qual o nome da doença que ele tem, as causas possíveis e os sintomas que ele sentiu. 
+
+Para cada doença, ele pode dizer quais os remédios que ele está tomando para se curar, com suas respectivas dosagens.
+Lembre-se que alguns remédios podem servir para várias coisas também.
+Robson quer que você crie uma tela no sistema para ele pesquisar o nome de uma doença e o sistema mostre o nome de todos os médicos que já o atendeu para aquele caso.
+
+Utilize a técnica Model First para desenvolver o projeto.
+
+
+
