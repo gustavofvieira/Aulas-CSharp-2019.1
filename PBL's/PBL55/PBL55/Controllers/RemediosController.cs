@@ -63,7 +63,7 @@ namespace PBL55.Controllers
                 }
                 if (remedio.Tarja.ToString() == "Sem")
                 {
-                    remedio.RetersReceita = false;
+                    remedio.ReterReceita = false;
                     db.RemedioSet.Add(remedio);
                     db.SaveChanges();
                     return RedirectToAction("Index");

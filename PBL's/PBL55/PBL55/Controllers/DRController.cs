@@ -21,6 +21,20 @@ namespace PBL55.Controllers
             return View(doencaRemedioSet.ToList());
         }
 
+        public ActionResult ResultadoBusca(string pesquisa)
+        {
+            var nomeDoenca = db.DoencaSet.Include(d => d.Id).Where(d => d.Nome == pesquisa);
+
+            var nomeRemedio = db.RemedioSet.Where(re => re.ReceitaId);
+            var nomeMedico = db.ReceitaSet.Include(r => r.Medico);
+
+            var acharNomeMedico = db.DoencaRemedioSet.Where(d => d.Remedio.ReceitaId == 1);
+            ViewBag.RetornoNome = pesquisa;
+            var doencaRemedioSet = db.DoencaRemedioSet.Include(d => d.Doenca).Include(d => d.Remedio);
+        
+            return View(doencaRemedioSet.ToList());
+        }
+
         // GET: DR/Details/5
         public ActionResult Details(int? id)
         {
@@ -51,7 +65,7 @@ namespace PBL55.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,RemedioId,DoencaId,Gravidade")] DoencaRemedio doencaRemedio)
         {
-            Remedio r = db.RemedioSet.Find(keyValues: doencaRemedio.Id);
+            Remedio r = db.RemedioSet.Find(doencaRemedio.Id);
             Doenca d = db.DoencaSet.Find(doencaRemedio.Id);
             
 

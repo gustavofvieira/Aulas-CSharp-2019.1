@@ -20,6 +20,17 @@ namespace PBL55.Controllers
             return View(db.ReceitaSet.ToList());
         }
 
+        public ActionResult ResultadoBusca(string pesquisa)
+        {
+            var nomeDoenca = db.DoencaSet.Where(d => d.Nome == pesquisa);
+
+            var nomeMedico = db.ReceitaSet.Include(r => r.Medico);
+
+            return View(nomeMedico.ToList());
+            //return View(db.ReceitaSet.ToList());
+        }
+
+
         // GET: Receitas/Details/5
         public ActionResult Details(int? id)
         {

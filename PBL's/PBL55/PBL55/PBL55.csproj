@@ -254,6 +254,8 @@
     <Content Include="Views\Remedios\Details.cshtml" />
     <Content Include="Views\Remedios\Edit.cshtml" />
     <Content Include="Views\Remedios\Index.cshtml" />
+    <Content Include="Views\DR\ResultadoBusca.cshtml" />
+    <Content Include="Views\Receitas\ResultadoBusca.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
