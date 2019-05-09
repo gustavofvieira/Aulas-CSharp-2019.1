@@ -40,31 +40,23 @@ POST:  o post não responde uma pagina, o cliente passa pelo http os dados, no c
 
  @Html.DropDownList("MusicoId", (MultiSelectList)ViewBag.MusicoId, new { multiple = "multiple" }) // Na view
  
- [HttpPost]
- 
- [ValidateAntiForgeryToken]
-
- public ActionResult Create([Bind(Include = "Id,Titulo,Data,Classificacao,Conteudo,LocalId")] Registro registro,List<int> PersonagemId)
-    
-    // o personagemId é o personagem aid que está no razor, para pegar a lista de personagens que esta no multselect list
-        
+[HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Id,Fk_Atendimento,Fk_Assistente")] AtendimentoAssitente atendimentoAssitente,List<int> Fk_Assistente, Atendimento Fk_Atendimento)
         {
             if (ModelState.IsValid)
             {
-                db.RegistroSet.Add(registro);
-                db.SaveChanges();
-                foreach(var idPersonagem in PersonagemId)
+                foreach(var assistenteId in Fk_Assistente)
                 {
-                    RegistrioPersonagem rp = new RegistrioPersonagem();
-                    rp.PersonagemId1 = idPersonagem;
-                    rp.RegistroId1 = registro.Id;
-                    db.RegistrioPersonagemSet.Add(rp);
-                   
+                    AtendimentoAssitente aa = new AtendimentoAssitente();
+                    aa.Fk_Atendimento = Fk_Atendimento.Id;
+                    aa.Fk_Assistente = assistenteId;
+                    db.AtendimentoAssitente.Add(aa);
+
                 }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.LocalId = new SelectList(db.LocalSet, "Id", "Nome", registro.LocalId);
-            return View(registro);
+            return View();
         }
