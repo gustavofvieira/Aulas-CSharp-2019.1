@@ -60,3 +60,48 @@ POST:  o post não responde uma pagina, o cliente passa pelo http os dados, no c
 
             return View();
         }
+        
+        
+# WebApi Rest e RestFull
+
+
+
+// Rest
+public HttpResponseMessage GetCarroes()
+        {
+            db.Configuration.LazyLoadingEnabled = false;
+            return
+                new HttpResponseMessage()
+                {
+                    Content = new StringContent(JArray.FromObject(db.Carroes).ToString(),
+                    Encoding.UTF8, "application/json")
+
+                };
+        }
+
+
+
+
+
+
+---------------------------------------
+//Restfull
+  string uri = "http://localhost:54256/api/Empresas1";
+        public async Task<List<Carro>> Index()
+        {
+            List<Carro> carros;
+            using (var client = new HttpClient())
+            {
+                using (var response = await client.GetAsync(uri))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var Json = await response.Content.ReadAsStringAsync();
+                        carros = JsonConvert.DeserializeObject<Carro[]>(Json).ToList();
+                        return carros;
+                    }
+                }
+            }
+            return null;
+        }
+
